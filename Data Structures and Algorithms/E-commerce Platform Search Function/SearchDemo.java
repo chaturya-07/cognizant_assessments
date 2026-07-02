@@ -13,7 +13,6 @@ class Product {
 
 public class SearchDemo {
 
-    // Linear Search Method
     public static Product linearSearch(Product[] products, int id) {
 
         for (Product product : products) {
@@ -24,8 +23,7 @@ public class SearchDemo {
 
         return null;
     }
-
-    // Binary Search Method
+    
     public static Product binarySearch(Product[] products, int id) {
 
         int low = 0;
@@ -49,7 +47,6 @@ public class SearchDemo {
 
     public static void main(String[] args) {
 
-        // Sorted array of products
         Product[] products = {
             new Product(101, "Laptop", "Electronics"),
             new Product(102, "Phone", "Electronics"),
@@ -57,8 +54,7 @@ public class SearchDemo {
             new Product(104, "Watch", "Accessories"),
             new Product(105, "Book", "Education")
         };
-
-        // Linear Search
+        
         Product result1 = linearSearch(products, 104);
 
         if (result1 != null) {
@@ -67,7 +63,6 @@ public class SearchDemo {
             System.out.println("Product Not Found");
         }
 
-        // Binary Search
         Product result2 = binarySearch(products, 104);
 
         if (result2 != null) {

@@ -1,0 +1,17 @@
+
+public class FinancialForecast {
+   public FinancialForecast() {
+   }
+
+   public static double futureValue(double var0, double var2, int var4) {
+      return var4 == 0 ? var0 : futureValue(var0 * ((double)1.0F + var2), var2, var4 - 1);
+   }
+
+   public static void main(String[] var0) {
+      double var1 = (double)1000.0F;
+      double var3 = 0.1;
+      byte var5 = 5;
+      double var6 = futureValue(var1, var3, var5);
+      System.out.println("Future Value after " + var5 + " years: " + var6);
+   }
+}

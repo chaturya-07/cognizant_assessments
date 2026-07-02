@@ -1,0 +1,53 @@
+// Source code is decompiled from a .class file using FernFlower decompiler (from Intellij IDEA).
+public class SearchDemo {
+   public SearchDemo() {
+   }
+
+   public static Product linearSearch(Product[] var0, int var1) {
+      for(Product var5 : var0) {
+         if (var5.productId == var1) {
+            return var5;
+         }
+      }
+
+      return null;
+   }
+
+   public static Product binarySearch(Product[] var0, int var1) {
+      int var2 = 0;
+      int var3 = var0.length - 1;
+
+      while(var2 <= var3) {
+         int var4 = (var2 + var3) / 2;
+         if (var0[var4].productId == var1) {
+            return var0[var4];
+         }
+
+         if (var0[var4].productId < var1) {
+            var2 = var4 + 1;
+         } else {
+            var3 = var4 - 1;
+         }
+      }
+
+      return null;
+   }
+
+   public static void main(String[] var0) {
+      Product[] var1 = new Product[]{new Product(101, "Laptop", "Electronics"), new Product(102, "Phone", "Electronics"), new Product(103, "Shoes", "Fashion"), new Product(104, "Watch", "Accessories"), new Product(105, "Book", "Education")};
+      Product var2 = linearSearch(var1, 104);
+      if (var2 != null) {
+         System.out.println("Linear Search Found: " + var2.productName);
+      } else {
+         System.out.println("Product Not Found");
+      }
+
+      Product var3 = binarySearch(var1, 104);
+      if (var3 != null) {
+         System.out.println("Binary Search Found: " + var3.productName);
+      } else {
+         System.out.println("Product Not Found");
+      }
+
+   }
+}

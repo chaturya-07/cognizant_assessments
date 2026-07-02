@@ -1,0 +1,11 @@
+class Product {
+   int productId;
+   String productName;
+   String category;
+
+   Product(int var1, String var2, String var3) {
+      this.productId = var1;
+      this.productName = var2;
+      this.category = var3;
+   }
+}

@@ -8,7 +8,7 @@ public class FinancialForecast {
             return value;
         }
 
-        // Recursive case
+        
         return futureValue(value * (1 + rate), rate, years - 1);
     }
 
